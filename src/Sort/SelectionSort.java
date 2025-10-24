@@ -1,6 +1,6 @@
 package Sort;
 
-public class SelcetionSort extends Sort
+public class SelectionSort extends Sort
 {
     @Override
     public int sort(int [] vertor, int tamanho)

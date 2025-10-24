@@ -14,63 +14,65 @@ Todas as classes exeto a Main, são filhas da classe abstrata Sort:
 
 Apresentaremos para cada Vetor agora o melhro em Relação a trocas apartir dos dados coletados: 
 
-  _____________________________________
-|                 Vetro 1              | 
-|                 |  Trocas Realizada  | 
-| SELECTION SORT  |        18          |
-| BUCKET SORT     |        20          |
-| COMB SORT       |        22          |
-| GNOME SORT      |        78          |
-| COCKTAIL SORT   |        78          |
-----------------------------------------
-________________________________________
-|                 Vetro 2              |
-|                 |  Trocas Realizada  | 
-| SELECTION SORT  |         0          |
-| COMB SORT       |         0          |
-| GNOME SORT      |         0          |
-| COCKTAIL SORT   |         0          |
-| BUCKET SORT     |        20          |
-----------------------------------------
-_______________________________________
-|                 Vetro 3              |
-|                 |  Trocas Realizada  | 
-| SELECTION SORT  |        10          | 
-| COMB SORT       |        18          |
-| BUCKET SORT     |        20          |
-| GNOME SORT      |        190         |
-| COCKTAIL SORT   |        190         |
-----------------------------------------
+## Trocas realizadas por vetor
 
-Apresentaremos para cada Vetor agora o melhro em Relação a Interações Apartir dos dados coletados : 
+### Vetor 1
+| Algoritmo       | Trocas Realizadas |
+|-----------------|-------------------|
+| SELECTION SORT  |       18          |
+| BUCKET SORT     |       20          |
+| COMB SORT       |       22          |
+| GNOME SORT      |       78          |
+| COCKTAIL SORT   |       78          |
 
-  _____________________________________
-|                 Vetro 1              | 
-|                 |     Interações     | 
-| BUCKET SORT     |        97          |
-| COMB SORT       |       129          |
-| GNOME SORT      |       176          |
-| SELECTION SORT  |       190          |
-| COCKTAIL SORT   |       209          |
-----------------------------------------
-________________________________________
-|                 Vetro 2              |
-|                 |     Interações     | 
-| COCKTAIL SORT   |        19          |
-| GNOME SORT      |        20          |
-| BUCKET SORT     |        92          |
-| COMB SORT       |       110          |
-| SELECTION SORT  |       190          |
-----------------------------------------
-_______________________________________
-|                 Vetro 3              |
-|                 |      Interações    | 
-| BUCKET SORTT    |        96          | 
-| COMB SORT       |       129          |
-| SELECTION SORT  |       190          |
-| COCKTAIL SORT   |       380          |
-| GNOME SORT      |       400          |
-----------------------------------------
+### Vetor 2
+| Algoritmo       | Trocas Realizadas |
+|-----------------|-------------------|
+| SELECTION SORT  |        0          |
+| COMB SORT       |        0          |
+| GNOME SORT      |        0          |
+| COCKTAIL SORT   |        0          |
+| BUCKET SORT     |       20          |
+
+### Vetor 3
+| Algoritmo       | Trocas Realizadas |
+|-----------------|-------------------|
+| SELECTION SORT  |       10          |
+| COMB SORT       |       18          |
+| BUCKET SORT     |       20          |
+| GNOME SORT      |      190          |
+| COCKTAIL SORT   |      190          |
+
+
+## Interações por vetor
+
+### Vetor 1
+| Algoritmo       | Interações      |
+|-----------------|----------------|
+| BUCKET SORT     | 97             |
+| COMB SORT       | 129            |
+| GNOME SORT      | 176            |
+| SELECTION SORT  | 190            |
+| COCKTAIL SORT   | 209            |
+
+### Vetor 2
+| Algoritmo       | Interações      |
+|-----------------|----------------|
+| COCKTAIL SORT   | 19             |
+| GNOME SORT      | 20             |
+| BUCKET SORT     | 92             |
+| COMB SORT       | 110            |
+| SELECTION SORT  | 190            |
+
+### Vetor 3
+| Algoritmo       | Interações      |
+|-----------------|----------------|
+| BUCKET SORT     | 96             |
+| COMB SORT       | 129            |
+| SELECTION SORT  | 190            |
+| COCKTAIL SORT   | 380            |
+| GNOME SORT      | 400            |
+
 
 ## Conclusão
 

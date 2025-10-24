@@ -47,7 +47,7 @@ public class Main {
         selection2 = selectionSort.sort(vetor2.clone(), tamanho);
         selection3 = selectionSort.sort(vetor3.clone(), tamanho);
 
-        int [] interacoes = new int [3];
+        int [] interacoes;
 
         // ------------- Mostra dados ---------------
         System.out.println("=== BUCKET SORT ===");

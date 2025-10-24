@@ -53,8 +53,8 @@ public class Main {
         System.out.println("=== BUCKET SORT ===");
         interacoes = bucketSort.getInteracao();
         System.out.println("Vetor 1 -> trocas:  " + bucket1 + "| Interações:  " +interacoes[0] );
-        System.out.println("Vetor 2 -> trocas:  " + bucket1 + "| Interações:  " +interacoes[1] );
-        System.out.println("Vetor 3 -> trocas:  " + bucket1 + "| Interações:  " +interacoes[2]);
+        System.out.println("Vetor 2 -> trocas:  " + bucket2 + "| Interações:  " +interacoes[1] );
+        System.out.println("Vetor 3 -> trocas:  " + bucket3 + "| Interações:  " +interacoes[2]);
 
         System.out.println("\n=== COMB SORT ===");
         interacoes = combSort.getInteracao();

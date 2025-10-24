@@ -47,30 +47,39 @@ public class Main {
         selection2 = selectionSort.sort(vetor2.clone(), tamanho);
         selection3 = selectionSort.sort(vetor3.clone(), tamanho);
 
+        int [] interacoes = new int [3];
+
         // ------------- Mostra dados ---------------
         System.out.println("=== BUCKET SORT ===");
-        System.out.println("Vetor 1 -> " + bucket1);
-        System.out.println("Vetor 2 -> " + bucket2);
-        System.out.println("Vetor 3 -> " + bucket3);
+        interacoes = bucketSort.getInteracao();
+        System.out.println("Vetor 1 -> trocas:  " + bucket1 + "| Interações:  " +interacoes[0] );
+        System.out.println("Vetor 2 -> trocas:  " + bucket1 + "| Interações:  " +interacoes[1] );
+        System.out.println("Vetor 3 -> trocas:  " + bucket1 + "| Interações:  " +interacoes[2]);
 
         System.out.println("\n=== COMB SORT ===");
-        System.out.println("Vetor 1 -> " + comb1);
-        System.out.println("Vetor 2 -> " + comb2);
-        System.out.println("Vetor 3 -> " + comb3);
+        interacoes = combSort.getInteracao();
+        System.out.println("Vetor 1 -> trocas:  " + comb1 + "| Interações:  " +interacoes[0] );
+        System.out.println("Vetor 2 -> trocas:  " + comb2 + "| Interações:  " +interacoes[1] );
+        System.out.println("Vetor 3 -> trocas:  " + comb3 + "| Interações:  " +interacoes[2]);
 
         System.out.println("\n=== GNOME SORT ===");
-        System.out.println("Vetor 1 -> " + gnome1);
-        System.out.println("Vetor 2 -> " + gnome2);
-        System.out.println("Vetor 3 -> " + gnome3);
+        interacoes = gnomeSort.getInteracao();
+        System.out.println("Vetor 1 -> trocas:  " + gnome1 + "| Interações:  " +interacoes[0] );
+        System.out.println("Vetor 2 -> trocas:  " + gnome2 + "| Interações:  " +interacoes[1] );
+        System.out.println("Vetor 3 -> trocas:  " + gnome3 + "| Interações:  " +interacoes[2]);
+
 
         System.out.println("\n=== COCKTAIL SORT ===");
-        System.out.println("Vetor 1 -> " + cocktail1);
-        System.out.println("Vetor 2 -> " + cocktail2);
-        System.out.println("Vetor 3 -> " + cocktail3);
+        interacoes = cocktailSort.getInteracao();
+        System.out.println("Vetor 1 -> trocas:  " + cocktail1 + "| Interações:  " +interacoes[0] );
+        System.out.println("Vetor 2 -> trocas:  " + cocktail2 + "| Interações:  " +interacoes[1] );
+        System.out.println("Vetor 3 -> trocas:  " + cocktail3 + "| Interações:  " +interacoes[2]);
 
         System.out.println("\n=== SELECTION SORT ===");
-        System.out.println("Vetor 1 -> " + selection1);
-        System.out.println("Vetor 2 -> " + selection2);
-        System.out.println("Vetor 3 -> " + selection3);
+        interacoes = selectionSort.getInteracao();
+        System.out.println("Vetor 1 -> trocas:  " + selection1 + "| Interações:  " +interacoes[0] );
+        System.out.println("Vetor 2 -> trocas:  " + selection2 + "| Interações:  " +interacoes[1] );
+        System.out.println("Vetor 3 -> trocas:  " + selection3 + "| Interações:  " +interacoes[2]);
+
     }
 }

@@ -1,29 +1,31 @@
 package Sort;
 
-public class SelectionSort extends Sort
-{
+public class SelectionSort extends Sort {
     @Override
-    public int sort(int [] vertor, int tamanho)
-    {
-        System.out.println("Selcetion Sort");
+    public int sort(int[] vetor, int tamanho) {
+        System.out.println("Selection Sort");
         int troca = 0;
+        int interacoes = 0;
         int temp;
-        for (int i = 0 ; i < tamanho; i++){
+
+        for (int i = 0; i < tamanho - 1; i++) {
             int menor_N = i;
-            for(int j = 0 ; j < tamanho; j++){
-                if (vertor[menor_N] > vertor[j]){
+            for (int j = i + 1; j < tamanho; j++) {
+                interacoes++;
+                if (vetor[menor_N] > vetor[j]) {
                     menor_N = j;
                 }
             }
-            if( menor_N != i ){
-                temp = vertor[menor_N];
-                vertor[menor_N] = vertor[i];
-                vertor[i] = temp;
-                troca ++;
+            if (menor_N != i) {
+                temp = vetor[menor_N];
+                vetor[menor_N] = vetor[i];
+                vetor[i] = temp;
+                troca++;
             }
-            imprimir(vertor,tamanho);
+            imprimir(vetor, tamanho);
         }
 
-        return  troca;
+        setInteracao(interacoes);
+        return troca;
     }
 }

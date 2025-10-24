@@ -6,6 +6,7 @@ public class BibleSort extends Sort
     public int sort(int [] vertor, int tamnho )
     {
         System.out.println("Bible Sorte");
+        int interacao = 0;
         int temp;
         int colisao;
         int troca = 0;
@@ -14,6 +15,7 @@ public class BibleSort extends Sort
             colisao = 0;
             for (int j =1 ; j< tamnho-1; j++)
             {
+                interacao ++;
                 if (vertor[j-1] > vertor[j])
                 {
                     temp = vertor[j-1];
@@ -28,6 +30,7 @@ public class BibleSort extends Sort
             else break;
         }
 
+        setInteracao(interacao);
         return troca;
     }
 }

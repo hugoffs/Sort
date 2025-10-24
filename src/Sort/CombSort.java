@@ -1,13 +1,12 @@
 package Sort;
 
-public class CombSort extends Sort
-{
+public class CombSort extends Sort {
     @Override
-    public int sort(int [] vetor, int tamanho)
-    {
+    public int sort(int[] vetor, int tamanho) {
         System.out.println("Comb Sort");
         boolean trocou = true;
         int trocas = 0;
+        int interacoes = 0;
         float fatorReducao = 1.3f;
         int gap = tamanho;
 
@@ -18,6 +17,7 @@ public class CombSort extends Sort
             trocou = false;
 
             for (int i = 0; i + gap < tamanho; i++) {
+                interacoes++;
                 if (vetor[i] > vetor[i + gap]) {
                     combSort(vetor, i, i + gap);
                     trocou = true;
@@ -26,11 +26,12 @@ public class CombSort extends Sort
                 }
             }
         }
+
+        setInteracao(interacoes);
         return trocas;
     }
 
-    private void combSort(int []vetor, int x , int y)
-    {
+    private void combSort(int[] vetor, int x, int y) {
         int temp = vetor[x];
         vetor[x] = vetor[y];
         vetor[y] = temp;

@@ -4,14 +4,20 @@ import Sort.Lista.Encadeada.Node;
 public class BucketSort extends Sort {
     private final int M = 10; // número de baldes
     private Node last; // referência ao último nó processado
+    private int interacao = 0; // contador de interações
 
     @Override
     public int sort(int[] vetor, int tamanho) {
         System.out.print("Bucket Sort ");
+
         if (tamanho <= 0) return 0;
+
+        interacao = 0; // resetar interações
+        int trocas = 0;
 
         int max = vetor[0], min = vetor[0];
         for (int i = 1; i < tamanho; i++) {
+            interacao++; // cada comparação conta
             if (vetor[i] > max) max = vetor[i];
             if (vetor[i] < min) min = vetor[i];
         }
@@ -22,18 +28,19 @@ public class BucketSort extends Sort {
             Node novo = new Node(vetor[i]);
             novo.setProximo(lista);
             lista = novo;
+            interacao++;
         }
 
         lista = bucketSort(lista, min, max);
 
         // copiar de volta para o vetor e contar trocas
-        int indice = 0, trocas = 0;
+        int indice = 0;
         for (Node p = lista; p != null; p = p.getProximo()) {
             vetor[indice++] = p.getDado();
             trocas++;
-            imprimir(vetor, tamanho);
         }
 
+        setInteracao(interacao);
         return trocas;
     }
 
@@ -56,6 +63,7 @@ public class BucketSort extends Sort {
 
         // distribuir os elementos nos baldes
         while (s != null) {
+            interacao++;
             int i = (s.getDado() - min) / div;
             if (i < 0) i = 0;
             else if (i >= M) i = M - 1;
@@ -68,6 +76,7 @@ public class BucketSort extends Sort {
             if (head[i].getProximo() == null) {
                 minb[i] = maxb[i] = t.getDado();
             } else {
+                interacao += 2;
                 if (t.getDado() > maxb[i]) maxb[i] = t.getDado();
                 if (t.getDado() < minb[i]) minb[i] = t.getDado();
             }
@@ -78,7 +87,6 @@ public class BucketSort extends Sort {
 
         for (int i = 0; i < M; i++) {
             if (head[i] != null) {
-
                 temp.setProximo(bucketSort(head[i], minb[i], maxb[i]));
                 temp = last;
             }
